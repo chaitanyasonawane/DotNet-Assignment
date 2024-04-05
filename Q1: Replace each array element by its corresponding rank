@@ -1,0 +1,9 @@
+def replace_with_rank(arr):
+    sorted_arr = sorted(arr)
+    rank_dict = {value: rank for rank, value in enumerate(sorted_arr, start=1)}
+    return [rank_dict[num] for num in arr]
+
+# Example usage:
+arr = [10, 8, 15, 12, 6, 20, 1]
+output = replace_with_rank(arr)
+print(output)  # Output: [4, 3, 6, 5, 2, 7, 1]
