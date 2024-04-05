@@ -1,0 +1,11 @@
+def frequency_of_elements(numbers):
+    frequency_dict = {}
+    for num in numbers:
+        frequency_dict[num] = frequency_dict.get(num, 0) + 1
+
+    for element, frequency in frequency_dict.items():
+        print(f"Element: {element}, Frequency: {frequency}")
+
+# Example usage:
+numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+frequency_of_elements(numbers)
