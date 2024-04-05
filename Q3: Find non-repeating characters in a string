@@ -1,0 +1,12 @@
+def non_repeating_characters(s):
+    char_count = {}
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+
+    non_repeating_chars = [char for char in s if char_count[char] == 1]
+    return non_repeating_chars
+
+# Example usage:
+s = "hello"
+output = non_repeating_characters(s)
+print(output)  # Output: ['h', 'e']
